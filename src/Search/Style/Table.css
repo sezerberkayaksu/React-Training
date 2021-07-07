@@ -1,0 +1,15 @@
+.table-title{
+  font-weight: bold;
+  text-align:left;
+}
+table tr:first-child{
+  margin-bottom: 10px;
+}
+label {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 10px;
+}
+label input[type="text"]{
+  padding: 5px;
+}
