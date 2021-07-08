@@ -12,6 +12,7 @@ import MouseWithCat from './Components/MouseWithCat';
 import UncontrolledComponenet from './Components/UncontrolledComponent';
 import { Example1, Example2,Example3, Example4} from './Components/HookExamples';
 import { EntryList } from './Components/AxiosExample';
+import ReduxPostList from './Redux';
 function App (){
     return(
         <div>
@@ -50,6 +51,9 @@ function App (){
             <Divider />
             <ComponentTitle title = "Axio Example" />
             <EntryList />
+            <Divider />
+            <ComponentTitle title = "Redux Post List" />
+            <ReduxPostList />
         </div>
     );
 }

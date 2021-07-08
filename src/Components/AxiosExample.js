@@ -7,7 +7,7 @@ export function EntryList(){
     axios.get('https://api.publicapis.org/entries')
     .then((res)=>{
       const entries = res.data.entries.slice(0,100).map((item,index)=>{
-        return(<li><a href = {item.Link}>{item.Description}</a></li>)
+        return(<li key={index}><a href = {item.Link}>{item.Description}</a></li>)
       });
       setEntries(entries);
     });

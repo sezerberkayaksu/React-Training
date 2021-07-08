@@ -2,8 +2,8 @@ import React from "react";
 function TypeList(props){
   return (
     <select value ={props.currentValue} onChange={props.onChange}>
-      {props.dizi.map((tip)=>
-        <option value = {tip}>{tip}</option>
+      {props.dizi.map((tip,index)=>
+        <option key ={index} value = {tip}>{tip}</option>
       )}
     </select>
   );

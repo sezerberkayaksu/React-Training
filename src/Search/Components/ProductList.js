@@ -31,15 +31,15 @@ function ProductRow(props) {
   else return "";
 }
 function ProductRows(props) {
-  let productRowList = props.ProductList.map((product) => (
-    <>
+  let productRowList = props.ProductList.map((product,index) => (
+    <React.Fragment key={index}>
       <ProductCategoryRow category={product.category} />
       <ProductRow
         searchText={props.searchText}
         stockCheck={props.stockCheck}
         product={product}
       />
-    </>
+    </React.Fragment>
   ));
   return productRowList;
 }
@@ -49,15 +49,17 @@ class ProductTable extends React.Component {
     return (
       <div>
         <table>
-          <tr>
-            <th className="table-title">Name</th>
-            <th className="table-title">Price</th>
-          </tr>
-          <ProductRows
-            searchText={searchText}
-            stockCheck={stockCheck}
-            ProductList={this.props.ProductList}
-          />
+          <tbody>
+            <tr>
+              <th className="table-title">Name</th>
+              <th className="table-title">Price</th>
+            </tr>
+            <ProductRows
+              searchText={searchText}
+              stockCheck={stockCheck}
+              ProductList={this.props.ProductList}
+            />
+          </tbody>
         </table>
       </div>
     );
