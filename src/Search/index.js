@@ -36,7 +36,9 @@ const dataList = [
 class ProductControllerExample extends React.Component {
   render() {
     return(
+      <>
       <FilterableProductTable dataList={dataList} />
+      </>
     );
   }
 }

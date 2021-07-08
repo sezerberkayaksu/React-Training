@@ -8,6 +8,10 @@ import ExampleForm from './Components/Form';
 import Calculator from './Components/BoilDetection';
 import ProductControllerExample from './Search';
 import ComponentTitle from './Components/ComponentTitle';
+import MouseWithCat from './Components/MouseWithCat';
+import UncontrolledComponenet from './Components/UncontrolledComponent';
+import { Example1, Example2,Example3, Example4} from './Components/HookExamples';
+import { EntryList } from './Components/AxiosExample';
 function App (){
     return(
         <div>
@@ -31,6 +35,21 @@ function App (){
             <Divider />
             <ComponentTitle title = "Product List With Filter" />
             <ProductControllerExample />
+            <Divider />
+            <ComponentTitle title = "Mouse With Cat" />
+            <MouseWithCat />
+            <Divider />
+            <ComponentTitle title = "Uncontrolled Component" />
+            <UncontrolledComponenet />
+            <Divider />
+            <ComponentTitle title = "Hook Examples" />
+            <Example1 />
+            <Example2 />
+            <Example3 />
+            <Example4 />
+            <Divider />
+            <ComponentTitle title = "Axio Example" />
+            <EntryList />
         </div>
     );
 }
