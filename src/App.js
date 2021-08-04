@@ -13,6 +13,9 @@ import UncontrolledComponenet from './Components/UncontrolledComponent';
 import { Example1, Example2,Example3, Example4} from './Components/HookExamples';
 import { EntryList } from './Components/AxiosExample';
 import ReduxPostList from './Redux';
+import MenuDiv from './ContextAPI/MenuDiv';
+import SetColor from './ContextAPI/SetColor';
+import ThemeProvider from './ContextAPI/ThemeContext/ThemeProvider';
 function App (){
     return(
         <div>
@@ -54,6 +57,12 @@ function App (){
             <Divider />
             <ComponentTitle title = "Redux Post List" />
             <ReduxPostList />
+            <Divider />
+            <ComponentTitle title = "Context HOC Example" />
+            <ThemeProvider>
+                <MenuDiv />
+                <SetColor />
+            </ThemeProvider>
         </div>
     );
 }
